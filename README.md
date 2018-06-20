@@ -21,11 +21,11 @@ Based on https://github.com/wardviaene/jenkins-docker
   ```
   git clone https://github.com/allioli/jenkins-docker.git
   cd jenkins-docker
-  docker build -t jenkins .
+  docker build -t allioli/jenkins .
   ```
  3. Run container based on docker image.
   ```
-  docker container run -p 8080:8080 -p 50000:50000 -v jenkins_home:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock -d --name jenkins jenkins:latest
+  docker container run -p 8080:8080 -p 50000:50000 -v jenkins_home:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock -d --name jenkins allioli/jenkins:latest
   ```
 *Details*
 - Specify named volume /var/jenkins_home to re-use previous jenkins installs and configuration
