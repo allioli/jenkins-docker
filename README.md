@@ -10,7 +10,7 @@ Based on https://github.com/wardviaene/jenkins-docker
 
 ### Why not [jenkins/jenkins](https://hub.docker.com/r/jenkins/jenkins) ?
 
-- Ability to call docker client commands from the jenkins container
+- Ability to call docker client and docker-compose commands from the jenkins container
 - Pre-install jenkins plugins
 - Based on debian slim latest
 
