@@ -14,7 +14,7 @@ services:
     build:
       context: .
       dockerfile: jenkins.Dockerfile
-      image: allioli/jenkins:latest
+    image: allioli/jenkins:latest
     ports:
       - '8080:8080'
       - '50000:50000'
