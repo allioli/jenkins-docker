@@ -1,0 +1,25 @@
+version: '2'
+
+# Same as
+# docker container run 
+# -p 8080:8080 -p 50000:50000 
+# -v jenkins_home:/var/jenkins_home 
+# -v /var/run/docker.sock:/var/run/docker.sock 
+# -d 
+# --name jenkins 
+# <image-name:rev>
+
+services:
+  proxy:
+    build:
+      context: .
+      dockerfile: jenkins.Dockerfile
+    ports:
+      - '8080:8080'
+      - '50000:50000'
+    volumes:
+      - jenkins_home:/var/jenkins_home
+      - /var/run/docker.sock:/var/run/docker.sock
+
+volumes:
+  jenkins_home:
