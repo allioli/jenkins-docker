@@ -23,7 +23,7 @@ Based on https://github.com/wardviaene/jenkins-docker
   ```
   git clone https://github.com/allioli/jenkins-docker.git
   cd jenkins-docker
-  docker build -t -f Dockerfile.jenkins allioli/jenkins .
+  docker image build -f jenkins.Dockerfile -t allioli/jenkins --rm .
   ```
  3. Run container based on docker image.
   ```
