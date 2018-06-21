@@ -12,7 +12,7 @@ usermod -aG users,docker jenkins
 
 USER jenkins
 
-RUN /usr/local/bin/install-plugins.sh locale git nodejs docker-build-publish job-dsl
+RUN /usr/local/bin/install-plugins.sh locale git nodejs docker-build-publish job-dsl workflow-aggregator
 
 
 
