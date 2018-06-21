@@ -6,7 +6,6 @@ version: '2'
 # -v jenkins_home:/var/jenkins_home 
 # -v /var/run/docker.sock:/var/run/docker.sock 
 # -d 
-# --name jenkins 
 # allioli/jenkins:latest
 
 services:
