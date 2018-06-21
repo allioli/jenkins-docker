@@ -7,13 +7,14 @@ version: '2'
 # -v /var/run/docker.sock:/var/run/docker.sock 
 # -d 
 # --name jenkins 
-# <image-name:rev>
+# allioli/jenkins:latest
 
 services:
-  proxy:
+  jenkins:
     build:
       context: .
       dockerfile: jenkins.Dockerfile
+      image: allioli/jenkins:latest
     ports:
       - '8080:8080'
       - '50000:50000'
