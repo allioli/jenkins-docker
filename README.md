@@ -16,12 +16,14 @@ Based on https://github.com/wardviaene/jenkins-docker
 
 ## Getting Started
 
+### With plain docker client
+
 1. Install docker
 2. Build docker image 
   ```
   git clone https://github.com/allioli/jenkins-docker.git
   cd jenkins-docker
-  docker build -t allioli/jenkins .
+  docker build -t -f Dockerfile.jenkins allioli/jenkins .
   ```
  3. Run container based on docker image.
   ```
@@ -30,3 +32,14 @@ Based on https://github.com/wardviaene/jenkins-docker
 *Details*
 - Specify named volume /var/jenkins_home to re-use previous jenkins installs and configuration
 - You need to run this command from the docker host machine, where the UNIX socked /var/run/docker.sock is located
+
+### With docker-compose
+
+1. Install docker-compose
+2. `cd jenkins-docker`
+3. `docker-compose up`
+
+*Details*
+- The named volume /var/jenkins_home will be created as `jenkins-docker_jenkins_home`
+- You need to run this command from the docker host machine, where the UNIX socked /var/run/docker.sock is located
+
