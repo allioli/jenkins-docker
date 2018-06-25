@@ -14,6 +14,9 @@ RUN curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-co
 -o /usr/local/bin/docker-compose && \
 chmod +x /usr/local/bin/docker-compose
 
+RUN mkdir -p /home/jenkins/.gradle && \
+chown 1000:1000 /home/jenkins/.gradle
+
 USER jenkins
 
 RUN /usr/local/bin/install-plugins.sh \
