@@ -23,8 +23,7 @@ nodejs \
 docker-build-publish \
 job-dsl \
 workflow-aggregator \
-email-ext
-
-
+email-ext \
+slack
 
 
