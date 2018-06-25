@@ -24,6 +24,7 @@ docker-build-publish \
 job-dsl \
 workflow-aggregator \
 email-ext \
-slack
+slack \
+github-branch-source
 
 
