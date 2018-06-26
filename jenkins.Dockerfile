@@ -26,6 +26,7 @@ workflow-aggregator \
 email-ext \
 slack \
 github-branch-source \
-artifactory
+artifactory \
+http_request
 
 
