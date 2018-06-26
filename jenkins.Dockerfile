@@ -25,6 +25,7 @@ job-dsl \
 workflow-aggregator \
 email-ext \
 slack \
-github-branch-source
+github-branch-source \
+artifactory
 
 
