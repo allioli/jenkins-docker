@@ -27,6 +27,7 @@ email-ext \
 slack \
 github-branch-source \
 artifactory \
-http_request
+http_request \
+sonar
 
 
