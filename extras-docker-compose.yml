@@ -2,8 +2,7 @@ version: '2'
 
 # Scenario with docker jenkins, smtp server, artifactory, sonarqube.
 
-services:
-  
+services:  
   jenkins:
     build:
       context: .
@@ -19,10 +18,8 @@ services:
       - smtp
       - artifactory
       - sonarqube
-  
   smtp:
     image: namshi/smtp:latest
-  
   artifactory:
     image: mattgruter/artifactory:latest
     ports:
@@ -31,7 +28,6 @@ services:
       - artifactory_data:/artifactory/data 
       - artifactory_logs:/artifactory/logs 
       - artifactory_backup:/artifactory/backup
-
   sonarqube:
      image: sonarqube:lts
      ports:
@@ -43,7 +39,6 @@ services:
         SONARQUBE_JDBC_URL: "jdbc:postgresql://postgres:5432/sonar"
      depends_on:
         - postgres
-
    postgres:
       image: postgres:9.6
       environment:
@@ -51,7 +46,6 @@ services:
          POSTGRES_PASSWORD: sonarpasswd
       volumes:
          - postgres_data:/var/lib/postgresql/data
-
 volumes:
   jenkins_home:
   artifactory_data:
