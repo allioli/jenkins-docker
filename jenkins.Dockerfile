@@ -28,6 +28,7 @@ slack \
 github-branch-source \
 artifactory \
 http_request \
-sonar
+sonar \
+blueocean
 
 
