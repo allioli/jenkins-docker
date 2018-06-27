@@ -29,6 +29,7 @@ github-branch-source \
 artifactory \
 http_request \
 sonar \
-blueocean
+blueocean \
+ssh-agent
 
 
